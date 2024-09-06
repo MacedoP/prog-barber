@@ -3,10 +3,12 @@
 import { Input } from "./_components/ui/input"
 import Header from "./_components/ui/Header"
 import { Button } from "./_components/ui/button"
-import { Badge, SearchIcon } from "lucide-react"
-// import { Badge} from "./_components/ui/badge"
+import {SearchIcon } from "lucide-react"
+import { Badge} from "./_components/ui/badge"
 import Image from "next/image"
 import { Card, CardContent } from "./_components/ui/card"
+import { Avatar, AvatarImage } from "./_components/ui/avatar"
+
 
 //Server components
 const Home = () => {
@@ -36,14 +38,31 @@ const Home = () => {
         </div>
 
         {/*Agentamentos Confirmados*/}
-        <Card className="">
-          <CardContent className="flex">
-            <div className="flex flex-col gap-2 py-5">
-              <Badge>Confirmado</Badge>
+        <Card className="mt-6">
+          <CardContent className="flex justify-between p-0">
+            {/*Left conteudo*/}
+            <div className="flex flex-col gap-2 py-5 pl-5">
+              <Badge className="w-fit">Confirmado</Badge>
+              <h3 className="font-semibold">Corte de Cebelo</h3>
+              <div className="flex items-center gap-2">
+                <Avatar className="h-6 w-6">
+                  <AvatarImage src="https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png"></ AvatarImage>
+                </Avatar>
+                <p className="text-sm">Barbearia FSW</p>
+              </div>
+            </div>
+
+            {/*Right conteudo*/}
+            <div className="flex flex-col justify-center items-center px-5 border-l-2 border-solid ">
+              <p className="text-sm">Dezembro</p>
+              <p className="text-2xl">12</p>
+              <p className="text-sm">20:00</p>
+
             </div>
             
           </CardContent>
         </Card>
+        
 
 
       </div>
